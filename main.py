@@ -1,3 +1,5 @@
+import sys
+
 import pygame
 
 from constants import *
@@ -33,6 +35,11 @@ def main():
         for d in drawable:
             d.draw(screen)
         pygame.display.flip()
+
+        for a in asteroids:
+            if a.collides(player):
+                print("Game over!")
+                sys.exit(0)
 
 if __name__ == "__main__":
     main()
