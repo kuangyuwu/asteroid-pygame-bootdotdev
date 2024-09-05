@@ -45,8 +45,8 @@ def main():
                 sys.exit(0)
             for s in shots:
                 if a.collides(s):
-                    a.kill()
                     s.kill()
+                    a.split()
                     break
 
 if __name__ == "__main__":
