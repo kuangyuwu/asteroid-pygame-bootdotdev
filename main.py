@@ -43,6 +43,11 @@ def main():
             if a.collides(player):
                 print("Game over!")
                 sys.exit(0)
+            for s in shots:
+                if a.collides(s):
+                    a.kill()
+                    s.kill()
+                    break
 
 if __name__ == "__main__":
     main()
